@@ -5,8 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "contact")
-data class Contact (
-
+data class Contact(
     @PrimaryKey(autoGenerate = true)
     var id: Long?,
 
@@ -17,8 +16,8 @@ data class Contact (
     var number: String,
 
     @ColumnInfo(name = "initial")
-    var inital: Char
-    ) {
+    var initial: Char
+) {
     constructor() : this(null, "", "", '\u0000')
 }
 
